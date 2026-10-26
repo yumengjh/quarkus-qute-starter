@@ -1,0 +1,38 @@
+{@java.lang.String name}
+{#include layout}
+    {#title}开发启动模板 · Quarkus + Qute{/title}
+    {#content}
+    <section class="hero">
+        <p class="eyebrow">READY TO BUILD</p>
+        <h1>你好，{name}！</h1>
+        <p class="lead">一个轻量、清晰、开箱即用的 Quarkus + Qute 开发起点。</p>
+        <form action="/" method="get" class="greeting-form">
+            <label for="name">你的名字</label>
+            <div class="input-row">
+                <input id="name" name="name" type="text" value="{name}" placeholder="输入名字，试试模板渲染" maxlength="80">
+                <button type="submit">打个招呼 <span aria-hidden="true">↗</span></button>
+            </div>
+        </form>
+    </section>
+    <section class="grid" aria-label="开始开发">
+        <article class="card">
+            <span class="step">01 / 页面</span>
+            <h2>Qute 模板</h2>
+            <p>首页通过 Java 传入数据，使用公共布局和构建时类型检查，HTML 自动转义。</p>
+            <code>templates/HomeResource/index.html</code>
+        </article>
+        <article class="card">
+            <span class="step">02 / 接口</span>
+            <h2>JSON API</h2>
+            <p>REST 接口与模板页面共存，逐步扩展你的业务。</p>
+            <a href="/api/hello">查看 /api/hello <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="card">
+            <span class="step">03 / 开发</span>
+            <h2>保存，即刻更新</h2>
+            <p>开发模式支持热重载。修改 Java、模板或样式后，刷新页面查看效果。</p>
+            <code>./mvnw quarkus:dev</code>
+        </article>
+    </section>
+    {/content}
+{/include}
